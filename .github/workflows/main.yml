@@ -68,7 +68,10 @@ jobs:
     - name: Check formatting
       run: cargo fmt -- --check
     - name: Where?
-      run: ls -la
+      run: | 
+        ls -la
+        ls -la target
+        ls -la feather
     - uses: actions/upload-artifact@v2
       with:
         name: Build
